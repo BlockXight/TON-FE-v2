@@ -1,5 +1,5 @@
 // export const TARGET_URL = "http://35.236.184.100:8080/";
-export const TARGET_URL = "http://104.199.221.66:8080/";
+export const TARGET_URL = "http://http://34.80.227.53:8080/";
 export const NODE_URL = `${TARGET_URL}filterNodes/`
 export const jetton_URL = `${TARGET_URL}jetton/`
 export const GRAPH_URL = `${TARGET_URL}graph/`
