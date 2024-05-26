@@ -19,6 +19,9 @@ import Footer from "./components/footer.jsx";
 import Header from './partials/Header';
 import WelcomeBanner from './partials/dashboard/WelcomeBanner';
 import {RecoilRoot} from 'recoil';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { Address } from './components/Address.jsx';
+
 function App() {
 
   const location = useLocation();
@@ -30,24 +33,25 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   return (
-    <>
-    <RecoilRoot>
-    <Header sidebarOpen={false} setSidebarOpen={()=>{}} />
-    {/* <WelcomeBanner/> */}
+    <TonConnectUIProvider manifestUrl="http://localhost:5173/tonconnect-manifest.json">
+      <RecoilRoot>
+        <Header sidebarOpen={false} setSidebarOpen={() => { }} />
+        {/* <WelcomeBanner/> */}
         {/* <div className='space'>
-        </div> */}
-      {/* <Routes>
-        <Route exact path="/" element={<MockJettonGraph />} />
-      </Routes> */}
-      <Routes>
-        <Route exact path="/current-tx" element={<CurrentTransaction />} />
-      </Routes>
-      <Routes>
-        <Route exact path="/current-jetton" element={<CurrentJettonTransaction />} />
-      </Routes>
-      <Footer/>
+            </div> */}
+        {/* <Routes>
+          <Route exact path="/" element={<MockJettonGraph />} />
+        </Routes> */}
+        <Address />  {/* Render Address component here */}
+        <Routes>
+          <Route exact path="/current-tx" element={<CurrentTransaction />} />
+        </Routes>
+        <Routes>
+          <Route exact path="/current-jetton" element={<CurrentJettonTransaction />} />
+        </Routes>
+        <Footer />
       </RecoilRoot>
-    </>
+    </TonConnectUIProvider>
   );
 }
 
