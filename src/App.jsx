@@ -40,7 +40,7 @@ function App() {
         <Route exact path="/" element={<MockJettonGraph />} />
       </Routes> */}
       <Routes>
-        <Route exact path="/current-tx" element={<CurrentTransaction />} />
+          <Route path="/" element={<CurrentTransaction />} />
       </Routes>
       <Routes>
         <Route exact path="/current-jetton" element={<CurrentJettonTransaction />} />

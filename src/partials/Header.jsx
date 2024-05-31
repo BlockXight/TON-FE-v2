@@ -34,8 +34,8 @@ function Header({ sidebarOpen, setSidebarOpen }) {
           {/* Header: Right side */}
           <div className="flex flex-wrap items-center space-x-3">
             {/* <Link to={"/"} className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton Mockdata</Link> */}
-            <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link>
-            <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link>
+            {/* <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link> */}
+            {/* <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link> */}
           </div>
         </div>
       </div>
