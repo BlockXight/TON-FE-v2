@@ -1,4 +1,20 @@
 .graph {
-    width: 1000px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* 確保圖表區域可見 */
+}
+
+.spinner {
+    border: 8px solid rgba(211, 211, 211, 0.5); /* 灰色和透明 */
+    border-top: 8px solid rgba(211, 211, 211, 1); /* 灰色 */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    background-color: transparent; /* 確保中間部分透明 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
