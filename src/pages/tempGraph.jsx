@@ -26,7 +26,6 @@ const TempGraph = (props) => {
     useEffect(() => {
         console.log(getNodes(props.data));
         const nodes = getNodes(props.data);
-        console.log(nodes);
         setMockData({
             nodes: nodes,
             links: getEdges(props.data)

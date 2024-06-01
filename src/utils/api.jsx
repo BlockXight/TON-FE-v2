@@ -1,7 +1,5 @@
 import { TARGET_URL } from '../core/setting';
 
-
-
 const parse = (dataArray) => {
     return dataArray.map(data=>{
         return {
@@ -12,6 +10,20 @@ const parse = (dataArray) => {
             type: data["Type"],
             amount: data["Amount"],
             confirm_Time: data["Confirm_time"]
+        }
+    })
+}
+
+export const mockParse = (dataArray) => {
+    return dataArray.map(data=>{
+        return {
+            tx_id: data["tx_id"],
+            block_id: 0xFF,  //mock block id
+            sender_address: data["sender_address"],
+            receiver_address: data["receiver_address"],
+            type: data["type"],
+            amount: data["amount"],
+            confirm_Time: 0xffffff
         }
     })
 }

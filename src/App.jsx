@@ -17,10 +17,10 @@ import CurrentTransaction from './pages/CurrentTxGraph';
 import CurrentJettonTransaction from './pages/CurrentJettonGraph';
 import Footer from "./components/footer.jsx";
 import Header from './partials/Header';
+import MainPage from './pages/mainPage.jsx';
 import WelcomeBanner from './partials/dashboard/WelcomeBanner';
 import {RecoilRoot} from 'recoil';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { Address } from './components/Address.jsx';
 
 function App() {
 
@@ -43,7 +43,7 @@ function App() {
         <Route exact path="/" element={<MockJettonGraph />} />
       </Routes> */}
       <Routes>
-          <Route path="/" element={<CurrentTransaction />} />
+          <Route path="/" element={<MainPage />} />
       </Routes>
       <Routes>
         <Route exact path="/current-jetton" element={<CurrentJettonTransaction />} />

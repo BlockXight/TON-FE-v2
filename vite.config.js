@@ -29,6 +29,13 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 5173,
-    cors: true
+    cors: true,
+    proxy: {
+      "/mock": {
+        target: "http://18.183.21.224:3000/transactions/mock",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/mock/, ""),
+      }
+    }
   }
 })
