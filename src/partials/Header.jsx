@@ -6,6 +6,7 @@ import Help from '../components/DropdownHelp';
 import UserMenu from '../components/DropdownProfile';
 import ThemeToggle from '../components/ThemeToggle';
 import UserAvatar from '../images/visualtonlogo.png';
+import { TonConnectButton } from '@tonconnect/ui-react';
 
 
 function Header({ sidebarOpen, setSidebarOpen }) {
@@ -36,6 +37,9 @@ function Header({ sidebarOpen, setSidebarOpen }) {
             {/* <Link to={"/"} className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton Mockdata</Link> */}
             {/* <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link> */}
             {/* <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link> */}
+            <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link>
+            <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link>
+            <TonConnectButton />
           </div>
         </div>
       </div>

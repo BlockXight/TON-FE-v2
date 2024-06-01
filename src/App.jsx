@@ -19,6 +19,9 @@ import Footer from "./components/footer.jsx";
 import Header from './partials/Header';
 import WelcomeBanner from './partials/dashboard/WelcomeBanner';
 import {RecoilRoot} from 'recoil';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { Address } from './components/Address.jsx';
+
 function App() {
 
   const location = useLocation();
@@ -30,10 +33,10 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   return (
-    <>
-    <RecoilRoot>
-    <Header sidebarOpen={false} setSidebarOpen={()=>{}} />
-    {/* <WelcomeBanner/> */}
+    <TonConnectUIProvider manifestUrl="http://localhost:5173/tonconnect-manifest.json">
+      <RecoilRoot>
+        <Header sidebarOpen={false} setSidebarOpen={() => { }} />
+        {/* <WelcomeBanner/> */}
         {/* <div className='space'>
         </div> */}
       {/* <Routes>
@@ -47,7 +50,7 @@ function App() {
       </Routes>
       <Footer/>
       </RecoilRoot>
-    </>
+    </TonConnectUIProvider>
   );
 }
 
