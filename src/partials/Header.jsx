@@ -37,8 +37,8 @@ function Header({ sidebarOpen, setSidebarOpen }) {
             {/* <Link to={"/"} className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton Mockdata</Link> */}
             {/* <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link> */}
             {/* <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link> */}
-            <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link>
-            <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link>
+            {/* <Link to={"/current-tx"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">TON</Link> */}
+            {/* <Link to={"/current-jetton"}className=" dark:border-white-700 text-gray-700 dark:text-[#cccccc] font-bold py-2 px-4 rounded">Jetton</Link> */}
             <TonConnectButton />
           </div>
         </div>
