@@ -8,19 +8,11 @@ import {
 import './css/style.css';
 
 import './charts/ChartjsConfig';
-
-// Import pages
-
-import MockGraph from './pages/mockGraph';
-import MockJettonGraph from './pages/mockJettonGraph';
-import CurrentTransaction from './pages/CurrentTxGraph';
-import CurrentJettonTransaction from './pages/CurrentJettonGraph';
+import MainPage from './pages/mainPage';
 import Footer from "./components/footer.jsx";
 import Header from './partials/Header';
-import WelcomeBanner from './partials/dashboard/WelcomeBanner';
 import {RecoilRoot} from 'recoil';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { Address } from './components/Address.jsx';
 
 function App() {
 
@@ -43,7 +35,7 @@ function App() {
         <Route exact path="/" element={<MockJettonGraph />} />
       </Routes> */}
       <Routes>
-          <Route path="/" element={<CurrentTransaction />} />
+          <Route path="/" element={<MainPage/>} />
       </Routes>
       <Routes>
         <Route exact path="/current-jetton" element={<CurrentJettonTransaction />} />
